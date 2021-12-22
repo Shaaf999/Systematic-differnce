@@ -1,0 +1,20 @@
+# Method 1
+a,b= [set(input().split()) for _ in range(4)][1::2]
+print('\n'.join(sorted(a^b, key=int)))
+
+#Method 2
+M=int(input())
+A=set(map(int,input().split()))
+N=int(input())
+B=set(map(int,input().split()))
+C= A.union(B)
+l=[]
+for i in C:
+    if i in A and i in B:
+        pass
+    else:
+        l.append(i)
+l.sort()
+for i in l:
+    print(i)
+    
